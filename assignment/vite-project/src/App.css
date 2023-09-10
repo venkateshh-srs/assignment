@@ -1,0 +1,84 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.getbeers-btn {
+  padding: 10px;
+  position: relative;
+  left: 50%;
+  bottom: 50%;
+}
+.search {
+  position: fixed;
+  text-align: center;
+  font-size: large;
+  outline: none;
+  width: 100%;
+  padding: 8px;
+  z-index: 1;
+  color: #414141;
+}
+.beer-card-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+.beer-card {
+  border: 1px solid rgb(168, 168, 168);
+  padding: 10px;
+  margin-top: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.beer-card:hover {
+  cursor: pointer;
+  transform: scale(1.04);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+.beer-name {
+  font-size: 28px;
+  color: #414141;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.tag {
+  font-family: Arial, sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: #353535;
+}
+.pairing-heading,
+.description-heading {
+  color: #434343;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+.pairing {
+  padding-left: 2px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: #5a5a5a;
+}
+.description {
+  padding-left: 2px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16px;
+  color: #5a5a5a;
+  font-weight: 400;
+}
+
+@media (max-width: 900px) {
+  .beer-card-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 550px) {
+  .beer-card-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
